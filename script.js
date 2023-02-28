@@ -1,12 +1,12 @@
 let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.navbar');
+let navigation = document.querySelector('.navigation');
 
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+    navigation.classList.toggle('active');
 }
 
 window.onscroll = () =>{
     menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
+    navigation.classList.remove('active');
 }
