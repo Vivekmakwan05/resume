@@ -78,6 +78,8 @@ section:nth-child(even){
     background: var(--green);
     margin-left: 1rem;
 }
+.fas fa-chevron-right{
+color:white;}
 
 .header{
     padding:2rem 9%;
