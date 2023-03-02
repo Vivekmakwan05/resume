@@ -184,7 +184,7 @@ section:nth-child(even){
 }
 
 .Resume .Resbox-container .box span{
-
+     color:white;
     font-size: 1.5rem;
 }
 
