@@ -78,8 +78,7 @@ section:nth-child(even){
     background: var(--green);
     margin-left: 1rem;
 }
-.fas fa-chevron-right{
-color:white;}
+
 
 .header{
     padding:2rem 9%;
@@ -185,7 +184,7 @@ color:white;}
 }
 
 .Resume .Resbox-container .box span{
-    color:var(--green);
+
     font-size: 1.5rem;
 }
 
