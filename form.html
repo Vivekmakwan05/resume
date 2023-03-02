@@ -53,50 +53,23 @@ form.html
   }
 
   /* navigation bar */
-  .header{
-    padding:1rem 6%;
-    position: fixed;
-    top:0; left: 0; right: 0;
-    z-index: 1000;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-}
+   .header {
+        padding: 0.8rem 6%;
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+    }
 
-.header .logo{
-    font-size: 2rem;
-    color: var(--black);
-}
+    .header .logo {
+        font-size: 2rem;
+        color: var(--black);
+        text-decoration: none;
+    }
 
-.header .logo i{
-    color: var(--green);
-}
-
-.header .navigation a{
-    font-size: 1.2rem;
-    color:teal;
-    margin-left: 2rem;
-}
-
-.header .navigation a:hover{
-    color: var(--green);
-}
-
-#menu-btn{
-    font-size: 2.5rem;
-    border-radius: .5rem;
-    background: #eee;
-    color:var(--green);
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-
-  /* Progressbar */
-  .progressbar {
+ /* Progressbar */
+ .progressbar {
     position: relative;
     display: flex;
     right: 0;
@@ -126,8 +99,8 @@ form.html
   }
 
   .progress-step {
-    width: 3.1875rem;
-    height: 2.1875rem;
+    width: 6rem;
+    height: 2rem;
     background-color: #dcdcdc;
     border-radius: 50%;
     display: flex;
@@ -151,17 +124,20 @@ form.html
   .progress-step-active {
     background-color: var(--primary-color);
     color: #f3f3f3;
-    width: 3rem;
-    height: auto;
+    width: 8rem;
+    height: 2.5rem;
   }
 
   /* Form */
 
 
   .form {
-    width: 40rem;
+    width: 40%;
     margin: 0 auto;
+    padding: 3rem;
     margin-top: 3rem;
+    border: 1px solid black;
+    box-shadow: 0 .5rem 1.5rem rgba(6, 101, 156, 0.616);
   }
 
   .form-step {
@@ -174,7 +150,7 @@ form.html
   display: flex;
   flex-direction: column;
 }
-.row {
+.rowform {
     display:flex;
     flex-direction:row;
 }
@@ -182,7 +158,7 @@ form.html
     flex:1;  
     display:flex;
     flex-direction:column; 
-    margin: 10px 10px;
+    margin: 10px 10px ;
 }
 .select{
   padding: 0.7rem;
@@ -290,33 +266,20 @@ form.html
   border: 1px solid whitesmoke;
 }
 
-.upload .round{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background: rgb(15, 140, 140);
-  width: 32px;
-  height: 32px;
-  line-height: 33px;
-  text-align: center;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 input[type=file]::-webkit-file-upload-button{
     cursor: pointer;
 }
 
 .btn-warning{
   position: relative;
-  padding: 7px;
-  font-size: 15px;
+  padding: 5px;
+  font-size: 10px;
   line-height: 1.5;
   border-radius: 3px;
   color: #fff;
-  background-color: rgb(15, 140, 140);
+  background-color: rgb(19, 100, 97);
   border: 0;
-  width: 7rem;
+  width: 5rem;
   transition: 0.2s;
   overflow: hidden;
 }
@@ -331,56 +294,10 @@ input[type=file]::-webkit-file-upload-button{
 }
 
 .btn-warning:hover{
-  background-color: brown;
+  background-color: #d9a400;
 }
-@media (max-width:991px){
-
-html{
-    font-size: 55%;
-}
-.header{
-    padding: 2rem;
-}
-}
-
-@media (max-width:768px){
-
-#menu-btn{
-    display: initial;
-}
-
-.header .navigation{
-    position: absolute;
-    top:115%; right: 2rem;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    width: 30rem;
-    border: var(--border);
-    background: #fff;
-    transform: scale(0);
-    opacity: 0;
-    transform-origin: top right;
-    transition: none;
-}
-
-.header .navigation.active{
-    transform: scale(1);
-    opacity: 1;
-    transition: .2s ease-out;
-}
-
-.header .navigation a{
-    font-size: 1.5rem;
-    display: block;
-    margin:2.5rem;
-}
-}
-
 @media(max-width: 700px) {
-    .form{
-      margin-top: 9rem;
-    }
-    .row{
+  .rowform{
       flex-direction:column; 
     }
     h2{
@@ -393,16 +310,12 @@ html{
       margin-left: 26rem;
     }
     .progressbar{
-      left: 2rem;
-    }
-    .btn-warning{
-      width: 15rem;
-      margin-left: -2rem;
+      left: 0;
     }
 }
 
 @media(max-width: 600px) {
-    .row{
+  .rowform{
       flex-direction:column; 
     }
     h2{
@@ -412,15 +325,13 @@ html{
       margin-left: -48rem;
     }
     .progressbar{
-      left: 2rem;
+      left: 0;
     }
     .progress-step-active{
       width: 3rem;
       height: auto;
     }
-    .progress-step::after{
-      font-size: 11px;
-    }
+    
     .btn{
       margin-left: 5rem;
     }
@@ -430,7 +341,7 @@ html{
 
 }
 @media(max-width: 500px) {
-    .row{
+  .rowform{
       flex-direction:column; 
     }
     h2{
@@ -443,10 +354,10 @@ html{
       margin-left: -48rem;
     }
     .progressbar{
-      left: 2rem;
+      left: 0;
     }
     .progress-step::after{
-      font-size: 12px;
+      font-size: 14px;
     }
     .progress-step-active{
       width: 3rem;
@@ -457,7 +368,7 @@ html{
     }
 }
 @media(max-width: 400px) {
-    .row{
+  .rowform{
       flex-direction:column; 
     }
     h2{
@@ -467,10 +378,10 @@ html{
       margin-left: -48rem;
     }
     .progressbar{
-      left: 2rem;
+      left: 0;
     }
     .progress-step::after{
-      font-size: 10px;
+      font-size: 14px;
     }
     .progress-step-active{
       width: 3rem;
@@ -481,7 +392,7 @@ html{
     }
 }
 @media(max-width: 300px) {
-    .row{
+  .rowform{
       flex-direction:column; 
       
     }
@@ -492,10 +403,10 @@ html{
       margin-left: -48rem;
     }
     .progressbar{
-      left: 2rem;
+      left: 0;
     }
     .progress-step::after{
-      font-size: 10px;
+      font-size: 14px;
     }
     .progress-step-active{
       width: 3rem;
@@ -514,252 +425,222 @@ html{
   flex-direction: row;
 }}
 
+
 </style>
 
 <body>
-
-  <header class="header">
-
-    <a href="#" class="logo"><span style="color: rgba(2, 92, 95, 0.904);"><b>Resume</b></span> B..</a>
-
-    <nav class="navigation">
-        <a href="#home">home</a>
-        <a href="#services">about</a>
-        <a href="#about">resume template</a>
-        <a href="#doctors">blogs</a>
-        <a href="#book">contact us</a>
-        <a href="login.html"><span style="color: brown;"><b>login/signup </b></span>👈</a>
-    </nav>
-
-    <div id="menu-btn" class="fas fa-bars"></div>
-
-</header><br><br><br>
-  
-  <form action="#" class="form">
-    <div class="progressbar">
-      <div class="progress" id="progress"></div>
-      
-      <div class="progress-step progress-step-active" data-title="heading"></div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="work history"></div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="education"></div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="skill"></div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="summary"></div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="finalize"></div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  
-    </div>
-    <br><br><br>
-    <h3 style="margin-left: 8rem;font-weight: normal; font-family:cursive; color: rgb(15, 140, 140);">❄️ Fill Detail And Create <span style="color: brown;"> Your Resume ❄️</span></h3> <br><hr><br><br>
-    <div class="form-step form-step-active">
-
-      <div class="row">  
-    <div class="upload">
-      <img src="./prof.png" width = 100 height = 100 alt="">
-      <button type = "button" class = "btn-warning">
-        <i class = "fa fa-upload"></i> Upload File
-        <input type="file">
-      </button>
-    </div>
-
-      <div class="row">
-      <div class="input-group">
-        <label>First name </label>
-       <input type="text" placholder="Enter your first name">
-      </div>
-      <div class="input-group">
-        <label>Last name</label>
-       <input type="text" placholder="Enter your last name">
-      </div>
-    </div>
-      </div>
-    <div class="row">
-    <div class="input-group">
-      <label>Proffesion</label>
-     <input type="text" placholder="Enter your Proffesion">
-    </div>
-    </div>
-    <div class="row">
-      <div class="input-group">
-        <label>City</label>
-       <input type="text" placholder="Enter City">
-      </div>
-      <div class="input-group">
-        <label>Country</label>
-       <input type="text" placholder="Enter Country">
-      </div>
-      <div class="input-group">
-        <label>Pin Code</label>
-       <input type="text" placholder="Enter Pin Code">
-      </div>
-      </div>
-      <div class="row">
-        <div class="input-group">
-          <label>Phone </label>
-         <input type="text" placholder="Enter your first name">
-        </div>
-        <div class="input-group">
-          <label>Email</label>
-         <input type="text" placholder="Enter your last name">
-        </div>
-      </div><br>
-      <div class="">
-        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
-      </div>
-    </div>
-
-
-    <div class="form-step">
-      <div class="row"> 
-      <div class="input-group">
-        <label for="phone">job Title</label>
-        <input type="text" name="job Title" id="job Title" />
-      </div>
-      <div class="input-group">
-        <label for="email">Employer</label>
-        <input type="text" name="Employer" id="Employer" />
-      </div>
-      </div>
-      <div class="row"> 
-        <div class="input-group">
-          <label for="phone">City</label>
-          <input type="text" name="City" id="City" />
-        </div>
-        <div class="input-group">
-          <label for="email">Country</label>
-          <input type="text" name="Country" id="Country" />
-        </div>
-        </div>
-        <div class="row"> 
-          <div class="input-group">
-            <label for="phone">Start Date</label>
-            <input type="text" name="Start Date" id="Start Data" />
-          </div>
-          <div class="input-group">
-            <label for="email">End Date</label>
-            <input type="text" name="End Date" id="End Date" />
-          </div>
-          </div>
-          <div class="row"> 
-            <input type="checkbox" id="current job">
-              <label for="current job">I currently work here</label><br>
-            </div><br><br><br><br><br><br>
-          
-      <div class="btns-group">
-        <a href="#" class="btn btn-prev">Previous</a>
-        <a href="#" class="btn btn-next">Next</a>
-      </div>
-    </div>
-
-    <div class="form-step">
-      <div class="row">
-      <div class="input-group">
-        <label for="School Name">School Name</label>
-        <input type="text" name="School Name" id="School Name" />
-      </div>
-      <div class="input-group">
-        <label for="School Location">School Location</label>
-        <input type="text" name="School Location" id="School Location" />
-      </div>
-      </div>
-      <div class="row">
-        <select class="select">
-          <option value="By the way">Select Degree</option>
-          <option value="Talk to you later">TTYL</option>
-          <option value="To be honest">TBH</option>
-          <option value=" I don’t know">IDK</option>
-      </select>
-      </div>
-      <div class="row">
-        <div class="input-group">
-          <label for="dob">Date of Birth</label>
-          <input type="date" name="dob" id="dob" />
-        </div>
-        <div class="input-group">
-          <label for="ID">National ID</label>
-          <input type="number" name="ID" id="ID" />
-        </div>
-        <div class="input-group">
-          <label for="ID">National ID</label>
-          <input type="number" name="ID" id="ID" />
-        </div>
-        </div>
-        <div class="row"> 
-          &nbsp; &nbsp;  <input type="checkbox" id="current school">
-            <label for="current school">I currently attend here</label><br>
-          </div><br><br><br><br><br><br>
-      <div class="btns-group">
-        <a href="#" class="btn btn-prev">Previous</a>
-        <a href="#" class="btn btn-next">Next</a>
-      </div>
-    </div>
-
-    <div class="form-step">
-      <div class="row">
-        <div class="search-input">
-          <a href="" target="_blank" hidden></a>
-          <input type="text" placeholder="Type to search..">
-          <div class="icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="autocom-box">
-          </div>
-        </div>
-      </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <div class="btns-group">
-        <a href="#" class="btn btn-prev">Previous</a>
-        <a href="#" class="btn btn-next">Next</a>
-      </div>
-    </div>
-    </div>
-
-    <div class="form-step">
-      <label>Type your summary here</label><br>
-        <textarea name="editor1"></textarea>
-        <script>
-                CKEDITOR.replace( 'editor1' );
-        </script><br>
-      <div class="btns-group">
-        <a href="#" class="btn btn-prev">Previous</a>
-        <a href="#" class="btn btn-next">Next</a>
-      </div>
-    </div>
-
-    <div class="form-step">
-      <h2><span style="color: brown;">Do you have anything else to add?</span></h2>
-      <h4>This section are optional</h4>
-      <div class="row" id="ch"> 
-        &nbsp; &nbsp;  <input type="checkbox" id="Accomplishments" >
-          <label for="Accomplishments">Accomplishments</label><br>
-   
-        </div><br>
-        <div class="row"id="ch" > 
-          &nbsp; &nbsp;  <input type="checkbox" id="Certifications">
-            <label for="Certifications">Certifications</label><br>
-          </div><br>
-          <div class="row"id="ch"> 
-            &nbsp; &nbsp;  <input type="checkbox"  id="Additional Information">
-              <label for="Additional Information">Additional Information</label><br>
-            </div><br>
-            <div class="row"id="ch"> 
-              &nbsp; &nbsp;  <input type="checkbox"  id="Software">
-                <label for="Software">Software</label><br>
-              </div><br>
-              <div class="row"id="ch"> 
-                &nbsp; &nbsp;  <input type="checkbox" id="Languages">
-                  <label for="Languages">Languages</label><br>
-                </div><br><br><br><br><br><br><br>
-
-            <div class="btns-group">
-              <a href="#" class="btn btn-prev">Previous</a>
-              <a href="#" class="btn btn-next">Next</a>
-            </div>
-    </div>
-  </form>
+	<header class="header">
+		  <a href="#" class="logo"><span style="color: rgba(2, 92, 95, 0.904);"><b>Resume</b></span> B..</a>
+	  </header><br>
+		
+		<form action="#" class="form" id="formid">
+		  <div class="progressbar">
+			<div class="progress" id="progress"></div>
+			
+			<div class="progress-step progress-step-active" data-title="heading"></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="work history"></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="education"></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="skill"></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="summary"></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="progress-step" data-title="finalize"></div>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		  </div>
+		  <br><br><br>
+		  
+		  <div class="form-step form-step-active">
+	  
+			<div class="rowform">  
+		  <div class="upload">
+			<img src="D:\major\prof.png" width = 100 height = 100 alt="">
+			<button type = "button" class = "btn-warning">
+			  <i class = "fa fa-upload"></i> Upload File
+			  <input type="file">
+			</button>
+		  </div>
+	  
+			<div class="rowform">
+			<div class="input-group">
+			  <label>First name </label>
+			 <input type="text" placholder="Enter your first name" id="Firstname">
+			</div>
+			<div class="input-group">
+			  <label>Last name</label>
+			 <input type="text" placholder="Enter your last name" id="Lastname">
+			</div>
+		  </div>
+			</div>
+		  <div class="rowform">
+		  <div class="input-group">
+			<label>Proffesion</label>
+		   <input type="text" placholder="Enter your Proffesion" id="Proffesion">
+		  </div>
+		  </div>
+		  <div class="rowform">
+			<div class="input-group">
+			  <label>City</label>
+			 <input type="text" placholder="Enter City" id="City">
+			</div>
+			<div class="input-group">
+			  <label>Country</label>
+			 <input type="text" placholder="Enter Country" id="Country">
+			</div>
+			<div class="input-group">
+			  <label>Pin Code</label>
+			 <input type="text" placholder="Enter Pin Code" id="PinCode2">
+			</div>
+			</div>
+			<div class="rowform">
+			  <div class="input-group">
+				<label>Phone </label>
+			   <input type="text" placholder="Enter your first name" id="PhoneIN">
+			  </div>
+			  <div class="input-group">
+				<label>Email</label>
+			   <input type="text" placholder="Enter your last name" id="EmailIN">
+			  </div>
+			</div><br>
+			<div class="">
+			  <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+			</div>
+		  </div>
+	  
+	  
+		  <div class="form-step">
+			<div class="rowform"> 
+			<div class="input-group">
+			  <label for="phone">job Title</label>
+			  <input type="text" name="job Title" id="job Title" />
+			</div>
+			<div class="input-group">
+			  <label for="email">Employer</label>
+			  <input type="text" name="Employer" id="Employer" />
+			</div>
+			</div>
+			<div class="rowform"> 
+			  <div class="input-group">
+				<label for="phone">City</label>
+				<input type="text" name="City" id="City" />
+			  </div>
+			  <div class="input-group">
+				<label for="email">Country</label>
+				<input type="text" name="Country" id="Country" />
+			  </div>
+			  </div>
+			  <div class="rowform"> 
+				<div class="input-group">
+				  <label for="phone">Start Date</label>
+				  <input type="date" name="Start Date" id="Start Data" />
+				</div>
+				<div class="input-group">
+				  <label for="email">End Date</label>
+				  <input type="date" name="End Date" id="End Date" />
+				</div>
+				</div>
+			<div class="btns-group">
+			  <a href="#" class="btn btn-prev">Previous</a>
+			  <a href="#" class="btn btn-next">Next</a>
+			</div>
+		  </div>
+	  
+		  <div class="form-step">
+			<div class="rowform">
+			<div class="input-group">
+			  <label for="School Name">School Name</label>
+			  <input type="text" name="School Name" id="School Name" />
+			</div>
+			<div class="input-group">
+			  <label for="School Location">School Location</label>
+			  <input type="text" name="School Location" id="School Location" />
+			</div>
+			</div>
+			<div class="rowform">
+			  <select class="select">
+				<option value="By the way">Select Degree</option>
+				<option value="Talk to you later">TTYL</option>
+				<option value="To be honest">TBH</option>
+				<option value=" I don’t know">IDK</option>
+			</select>
+			</div>
+			<div class="rowform">
+			  <div class="input-group">
+				<label for="dob">Fiel Of Study</label>
+				<input type="text" name="dob" id="dob" />
+			  </div>
+			  <div class="input-group">
+				<label for="ID">Graduation Start Date</label>
+				<input type="date" name="ID" id="ID" />
+			  </div>
+			  <div class="input-group">
+				<label for="ID">Graduation End Date</label>
+				<input type="date" name="ID" id="ID" />
+			  </div>
+			  </div>
+			 
+			<div class="btns-group">
+			  <a href="#" class="btn btn-prev">Previous</a>
+			  <a href="#" class="btn btn-next">Next</a>
+			</div>
+		  </div>
+	  
+		  <div class="form-step">
+		  <br><br><br><br><br><br>
+			<div class="btns-group">
+			  <a href="#" class="btn btn-prev">Previous</a>
+			  <a href="#" class="btn btn-next">Next</a>
+			</div>
+	  
+		  </div>
+	  
+		  <div class="form-step">
+			<label>Type your summary here</label><br>
+			  <textarea name="editor1"></textarea>
+			  <script>
+					  CKEDITOR.replace( 'editor1' );
+			  </script><br><br>
+			<div class="btns-group">
+			  <a href="#" class="btn btn-prev">Previous</a>
+			  <a href="#" class="btn btn-next">Next</a>
+			</div>
+		  </div>
+	  
+		  <div class="form-step">
+			<h2><span style="color: brown;">Do you have anything else to add?</span></h2>
+			<h4>This section are optional</h4>
+			<div class="rowform" id="ch"> 
+			  &nbsp; &nbsp;  <input type="checkbox" id="Accomplishments" >
+				<label for="Accomplishments">Accomplishments</label><br>
+		 
+			  </div><br>
+			  <div class="rowform"id="ch" > 
+				&nbsp; &nbsp;  <input type="checkbox" id="Certifications">
+				  <label for="Certifications">Certifications</label><br>
+				</div><br>
+				<div class="rowform"id="ch"> 
+				  &nbsp; &nbsp;  <input type="checkbox"  id="Additional Information">
+					<label for="Additional Information">Additional Information</label><br>
+				  </div><br>
+				  <div class="rowform"id="ch"> 
+					&nbsp; &nbsp;  <input type="checkbox"  id="Software">
+					  <label for="Software">Software</label><br>
+					</div><br>
+					<div class="rowform"id="ch"> 
+					  &nbsp; &nbsp;  <input type="checkbox" id="Languages">
+						<label for="Languages">Languages</label><br>
+					  </div><br><br><br><br>
+	  
+				  <div class="btns-group">
+					<a href="#" class="btn btn-prev" >Previous</a>
+					<a href="#" class="btn btn-next" onclick="fainalize()">Next</a>
+				  </div>
+		  </div>
+		  
+		</form>
 
   <script>
     const prevBtns = document.querySelectorAll(".btn-prev");
