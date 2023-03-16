@@ -29,6 +29,8 @@ section{
     padding:2rem 9%;
 }
 
+
+
 .loader {
     position: fixed;
     top: 0;
@@ -65,7 +67,7 @@ section{
 
 .heading span{
 
-    color:teal;
+    color:rgb(14, 78, 101);
 }
 
 .btn{
@@ -85,13 +87,13 @@ section{
 .btn span{
     padding:.7rem 1rem;
     border-radius: .5rem;
-    background:teal;
+    background:rgb(14, 78, 101);
     color:#fff;
     margin-left: .5rem;
 }
 
 .btn:hover{
-    background:teal;
+    background:rgb(14, 78, 101);
     color:#fff;
 }
 
@@ -119,7 +121,7 @@ section{
 }
 
 .header .logo i{
-    color: var(--green);
+    color:rgb(14, 78, 101);
 }
 
 .header .navigation a{
@@ -142,13 +144,24 @@ section{
     display: none;
 }
 
+#myVideo {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+  }
+
 .homepage{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap:1.5rem;
     padding-top: 10rem;
-    background-image: url("https://media.giphy.com/media/1xnOnHhu9WNsmzC5tJ/giphy.gif");
+    /* background-image: url("D:/major/image/gh.jpg"); */
 }
 
 .homepage .image{
@@ -157,6 +170,7 @@ section{
 
 .homepage .image img{
     width: 100%;
+    margin-top: -7rem;
 }
 
 .homepage .content{
@@ -164,15 +178,15 @@ section{
 }
 
 .homepage .content h3{
-    font-size: 4.5rem;
+    font-size: 4.7rem;
     color:white;
     line-height: 1.8;
     text-shadow: var(--text-shadow);
-    margin-top: -7rem;
+    margin-top: -10rem;
 }
 .homepage .content p{
-    font-size: 1.7rem;
-    color:var(--light-color);
+    font-size: 1.9rem;
+    color:white;
     line-height: 1.8;
     padding: 1rem 0;
 }
@@ -217,14 +231,14 @@ section{
     width: 5rem;
     line-height: 4.5rem;
     font-size: 2rem;
-    color:var(--green);
+    color:rgb(14, 78, 101);
     border-radius: .5rem;
     border:var(--border);
     margin:.3rem;
 }
 
 .Resume .Resbox-container .box .share a:hover{
-    background:var(--green);
+    background:rgb(14, 78, 101);
     color:#fff;
 }
 
@@ -301,12 +315,13 @@ section{
     font-size: 2.5rem;
     color:var(--black);
     padding: 1rem 0;
+    text-align: center;
 }
 
 .footer .Footbox-container .box a{
     display: flex;
     flex-direction: row;
-    justify-content:left;
+    justify-content:center;
     text-align: center;
     font-size: 1.5rem;
     color:var(--light-color);
@@ -314,7 +329,7 @@ section{
 
 .footer .Footbox-container .box a i{
     padding-right: .5rem;
-    color:teal;
+    color:rgb(14, 78, 101);
 }
 
 .footer .Footbox-container .box a:hover i{
@@ -332,7 +347,7 @@ section{
 }
 
 .footer .credit span{
-    color:teal;
+    color:rgb(14, 78, 101);
 }
 
 @media (min-width: 1024px){
@@ -379,6 +394,9 @@ section{
     section{
         padding:2rem;
     }
+    #myVideo{
+        height: 100%;
+      }
 }
 
 @media (max-width:768px){
@@ -419,18 +437,25 @@ section{
     
       .about-content { max-width: 600px; }
       h2{
-        margin-top: -6rem;
+        margin-top: -10rem;
       }
       h4{
         margin-top: -3rem;
       }
-      
 }
+@media (max-width:500px){
+    #myVideo{
+        height: 80%;
+      }
 
-@media (max-width:450px){
+}
+@media (max-width:480px){
 
     html{
         font-size: 50%;
     }
+    #myVideo{
+        height: 80%;
+      }
 
 }
