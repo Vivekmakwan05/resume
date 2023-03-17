@@ -160,8 +160,7 @@ section{
     align-items: center;
     flex-wrap: wrap;
     gap:1.5rem;
-    padding-top: 10rem;
-    /* background-image: url("D:/major/image/gh.jpg"); */
+  
 }
 
 .homepage .image{
@@ -437,7 +436,7 @@ section{
     
       .about-content { max-width: 600px; }
       h2{
-        margin-top: -7rem;
+        margin-top: -2rem;
       }
       h4{
         margin-top: -3rem;
