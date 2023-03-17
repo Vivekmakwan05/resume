@@ -437,7 +437,7 @@ section{
     
       .about-content { max-width: 600px; }
       h2{
-        margin-top: -10rem;
+        margin-top: -7rem;
       }
       h4{
         margin-top: -3rem;
@@ -449,7 +449,7 @@ section{
       }
 
 }
-@media (max-width:480px){
+@media (max-width:499px){
 
     html{
         font-size: 50%;
