@@ -127,9 +127,7 @@ section {
     flex-wrap: wrap;
     gap: 1.5rem;
     padding-top: 10rem;
-    background: url("https://thumbs.gfycat.com/LimitedUltimateBoubou-size_restricted.gif");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-image: url("./16.jpg");
 }
 
 .homepage .image {
